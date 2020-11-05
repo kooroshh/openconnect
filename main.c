@@ -309,8 +309,8 @@ static int __attribute__ ((format(printf, 2, 0)))
 	buf[sizeof(buf) - 1] = 0;
 	chars = _vsnprintf(buf, sizeof(buf) - 1, fmt, args);
 	wchars = MultiByteToWideChar(CP_UTF8, 0, buf, -1, wbuf, sizeof(wbuf)/2);
-	WriteConsoleW(h, wbuf, wchars, NULL, NULL);
-
+	//WriteConsoleW(h, wbuf, wchars, NULL, NULL);
+ 	printf("%s",buf);
 	return chars;
 }
 
